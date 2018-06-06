@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "3e152e16-06d8-4e7e-aede-89a486a3c9a3",
+		"name": "alchinf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "db",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "icons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/icons?q=hand",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"icons"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "hand"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "element",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"steam\",\n    \"icon\": {\n        \"url\": \"407/407930\",\n        \"color\": \"gray\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/element",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"element"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recipie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"elem1\": \"fire\",\n\t\"elem2\": \"water\",\n\t\"product\": [\"steam\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/recipie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recipie"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
