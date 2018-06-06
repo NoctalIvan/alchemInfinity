@@ -1,5 +1,3 @@
-const fs = require('fs')
-
 module.exports = {
     init(app, db) {
       app.post('/element', (req, res) => {
@@ -17,7 +15,7 @@ module.exports = {
         }
         
         db.elements[elem.name] = elem
-        fs.writeFile(__dirname + '/../db/elements.json', JSON.stringify(db.elements), () => {})
+        db.saveElements()
         res.status(204).send()
       })
     }
